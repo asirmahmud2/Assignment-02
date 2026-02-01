@@ -1,4 +1,74 @@
+/* Universal Style */
+* {
+    max-width: 1600px;
+    margin: 0;
+}
+
+
 .font {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
 }
+
+/* Shared Style */
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.theme {
+    background-color: rgba(26, 11, 46, 1);
+}
+
+.clr {
+    background: linear-gradient(45deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1));
+}
+
+.btn {
+    background: linear-gradient(45deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1));
+    border-radius: 10000px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.btn-clr {
+    color: white;
+    padding: 12.5px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar */
+
+.navbar {
+    max-width: 1200px;
+    justify-content: space-between;
+    margin: 0px auto;
+    padding: 30px;
+}
+
+.navbar h3 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.navbar ul {
+    gap: 32px;
+}
+
+.navbar li {
+    list-style: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+/* About Podcast */
