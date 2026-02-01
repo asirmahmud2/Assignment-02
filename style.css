@@ -2,6 +2,7 @@
 * {
     max-width: 1600px;
     margin: 0;
+    box-sizing: border-box;
 }
 
 
@@ -21,12 +22,11 @@
     background-color: rgba(26, 11, 46, 1);
 }
 
-.wt{
+.wt {
     color: white;
 }
 
-.bg-clr
-{
+.bg-clr {
     background-color: rgba(35, 14, 61, 1);
 }
 
@@ -53,7 +53,7 @@
     align-items: center;
 }
 
-hr{
+hr {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -84,43 +84,50 @@ hr{
     font-weight: 500;
 }
 
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
 
 /* About Podcast */
 
-.About-Podcast{
+.About-Podcast {
     background-color: rgba(26, 11, 46, 1);
 }
 
-.About-Podcast{
+.About-Podcast {
     justify-content: center;
     text-align: center;
 }
 
-.description{
+.description {
     color: white;
     margin-bottom: 80px;
 }
 
-.description h2{
+.description h2 {
     font-size: 3rem;
     font-weight: 700;
     padding-top: 50px;
     margin-bottom: 16px;
 }
 
-.description .p1{
+.description .p1 {
+    font-size: 1rem;
+    padding-bottom: 20px;
+    line-height: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.description .p2 {
     font-size: 1rem;
     margin-bottom: 16px;
     line-height: 20px;
 }
 
-.description .p2{
-    font-size: 1rem;
-    margin-bottom: 16px;
-    line-height: 20px;
-}
-
-.rating{
+.rating {
     color: white;
     justify-content: center;
     gap: 80px;
@@ -128,18 +135,18 @@ hr{
     padding-bottom: 120px;
 }
 
-.rating .rate{
+.rating .rate {
     width: 240px;
 }
 
-.rate .rate-no{
+.rate .rate-no {
     font-size: 3rem;
     font-weight: 900;
     color: #00FF88;
     margin-bottom: 16px;
 }
 
-.rate .rate-type{
+.rate .rate-type {
     line-height: 20px;
     font-weight: 400;
 }
@@ -147,26 +154,26 @@ hr{
 
 /* Why Choose */
 
-.reason{
+.reason {
     padding: 120px;
 }
 
-.reason h2{
+.reason h2 {
     text-align: center;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 40px;
 }
 
-.container{
+.container {
     display: grid;
-    grid-template-rows: repeat(3,240px);
-    grid-template-columns: repeat(3,380px);
+    grid-template-rows: repeat(3, 240px);
+    grid-template-columns: repeat(3, 380px);
     gap: 30px;
     justify-content: center;
 }
 
-.container .grid{
+.container .grid {
     background-color: rgba(53, 17, 101, 0.4);
     padding: 40px;
     border-radius: 40px;
@@ -176,21 +183,218 @@ hr{
     align-items: flex-start;
 }
 
-.two-row{
+.two-row {
     grid-row: span 2;
 }
 
-.two-column{
+.two-column {
     grid-column: span 2;
 }
 
-.grid .grid-head{
+.grid .grid-head {
     font-size: 1.5rem;
     font-weight: 700;
     margin: 16px 0;
 }
 
-.grid-text{
+.grid-text {
     font-size: 16px;
     line-height: 24px;
+}
+
+/* Featured */
+.featured {
+    padding: 120px;
+    background-color: rgba(26, 11, 46, 1);
+}
+
+.featured h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+.card {
+    background-color: rgba(53, 17, 101, 0.4);
+    border-radius: 30px;
+}
+
+.context {
+    padding: 40px;
+}
+
+.card-head {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.card-txt {
+    line-height: 24px;
+    margin-bottom: 12px;
+}
+
+.time {
+    gap: 10px;
+}
+
+.host {
+    text-align: left;
+    background-color: rgba(53, 17, 101, 0.4);
+    max-width: 1200px;
+    border-radius: 30px;
+    padding: 40px;
+    gap: 24px;
+    margin: 0 auto;
+}
+
+.host-img {
+    margin-right: 24px;
+}
+
+.host h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.host p {
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+.logo {
+    gap: 10px;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: 40px;
+}
+
+/* Footer */
+
+footer {
+    /* background-image: url(Images/footer-bg.png); */
+    background: url(Images/footer-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 120px;
+    color: white;
+}
+
+footer h1 {
+    font-size: 3.5rem;
+    margin-bottom: 32px;
+}
+
+.socials {
+    justify-content: center;
+    gap: 40px;
+}
+
+.social {
+    gap: 10px;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+
+.hide {
+    display: none;
+}
+
+/* Resposive Design */
+@media screen and (max-width:576px) {
+
+    .nav-links,
+    .nav-btn {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        color: white;
+    }
+
+    .rating {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .rating .rate {
+        width: auto;
+    }
+
+    .reason,
+    .featured,
+    footer {
+        padding: 40px 20px;
+    }
+
+    .reason h2 {
+        font-size: 2rem;
+    }
+
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        align-items: normal;
+    }
+
+    .two-row {
+        grid-row: auto;
+    }
+
+    .two-column {
+        grid-column: auto;
+    }
+
+    .container .grid {
+        border-radius: 40px;
+    }
+
+    .description .p1 {
+        margin-bottom: 10px;
+    }
+
+    .host-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    footer h1 {
+        font-size: 2rem;
+        margin-bottom: 32px;
+    }
+
+    .socials {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .social {
+        margin-bottom: 10px;
+        justify-content: center;
+    }
 }
