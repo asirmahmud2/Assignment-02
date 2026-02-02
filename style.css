@@ -32,6 +32,12 @@
 
 .clr {
     background: linear-gradient(45deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.clr2 {
+    color: linear-gradient(45deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1));
 }
 
 .btn {
@@ -41,6 +47,15 @@
     justify-content: center;
     align-items: center;
     border: none;
+    cursor: pointer;
+}
+
+.btn span {
+    transition: color 2s ease;
+}
+
+.btn:hover span {
+    color: #00FF88;
 }
 
 .btn-clr {
@@ -71,10 +86,15 @@ hr {
     color: white;
     font-size: 2rem;
     font-weight: 800;
+    cursor: pointer;
 }
 
 .navbar ul {
     gap: 32px;
+}
+
+.navbar li:hover {
+    color: #00FF88;
 }
 
 .navbar li {
@@ -82,6 +102,7 @@ hr {
     color: white;
     font-size: 1rem;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .hamburger {
@@ -101,7 +122,6 @@ hr {
     background-repeat: no-repeat;
     justify-content: center;
     align-items: center;
-    position: relative;
     color: white;
 }
 
@@ -110,16 +130,22 @@ hr {
     text-align: center;
 }
 
+.circle-container {
+    position: relative;
+    display: inline-block;
+}
+
 .badge {
     background-color: #00FF88;
     color: #1A0B2E;
     position: absolute;
-    top: -170px;
-    left: 360px;
+    top: 10px;
+    right: 25px;
     border-radius: 10000px;
     z-index: 2;
     padding: 12.5px 16px;
 }
+
 
 .circle {
     height: 350px;
@@ -127,13 +153,9 @@ hr {
     background: url(Images/hero-circle.png);
     background-size: cover;
     background-position: center;
-    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: -190px;
-    left: 95px;
     z-index: 1;
 }
 
@@ -144,7 +166,7 @@ hr {
 
 .banner-text {
     position: relative;
-    top: 170px;
+    top: 50px;
 }
 
 .banner-text h2 {
@@ -178,6 +200,7 @@ hr {
     gap: 7px;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 /* About Podcast */
@@ -380,6 +403,7 @@ hr {
 .logo img {
     height: 40px;
     width: 40px;
+    cursor: pointer;
 }
 
 /* Footer */
@@ -409,13 +433,19 @@ footer h1 {
     gap: 10px;
     font-weight: 500;
     margin-bottom: 32px;
+    cursor: pointer;
+}
+
+.social:hover {
+    color: #00FF88;
 }
 
 .hide {
     display: none;
 }
 
-/* Resposive Design */
+/* Responsive Design */
+
 @media screen and (max-width:576px) {
 
     .nav-links,
@@ -428,56 +458,59 @@ footer h1 {
         color: white;
     }
 
-    /* Banner */
+    .banner {
+        height: auto;
+        padding: 100px 16px 120px;
+        display: flex;
+        justify-content: center;
+    }
 
-    @media (max-width: 576px) {
+    .banner-container {
+        width: 100%;
+    }
 
-        .banner {
-            height: 60vh;
-            padding: 100px 16px 220px;
-        }
+    .circle-container {
+        margin: 0 auto;
+        width: 200px;
+    }
 
-        .badge {
-            top: -20px;
-            left: 270px;
-            padding: 7.5px 9px;
-        }
+    .badge {
+        top: 6px;
+        right: 6px;
+        padding: 7.5px 9px;
+    }
 
-        .circle {
-            width: 200px;
-            height: 200px;
-            top: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+    .circle {
+        width: 200px;
+        height: 200px;
+    }
 
-        .mic {
-            width: 60px;
-        }
+    .mic {
+        width: 70px;
+    }
 
-        .banner-text {
-            top: 180px;
-            padding: 0 10px;
-        }
+    .banner-text {
+        top: 0;
+        padding: 0 10px;
+        margin-top: 36px;
+    }
 
-        .banner-text h2 {
-            font-size: 2.5rem;
-        }
+    .banner-text h2 {
+        font-size: 2.5rem;
+    }
 
-        .banner-text p {
-            font-size: 1rem;
-        }
+    .banner-text p {
+        font-size: 1rem;
+    }
 
-        .buttons {
-            gap: 12px;
-        }
+    .buttons {
+        gap: 12px;
+    }
 
-        .btn,
-        .transparent {
-            width: 100%;
-            justify-content: center;
-        }
-
+    .btn,
+    .transparent {
+        width: 100%;
+        justify-content: center;
     }
 
     .rating {
