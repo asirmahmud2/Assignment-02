@@ -90,6 +90,96 @@ hr {
     cursor: pointer;
 }
 
+
+/* Banner */
+
+.banner {
+    height: 85vh;
+    background: url(Images/hero-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+.banner-container {
+    position: relative;
+    text-align: center;
+}
+
+.badge {
+    background-color: #00FF88;
+    color: #1A0B2E;
+    position: absolute;
+    top: -170px;
+    left: 360px;
+    border-radius: 10000px;
+    z-index: 2;
+    padding: 12.5px 16px;
+}
+
+.circle {
+    height: 350px;
+    width: 350px;
+    background: url(Images/hero-circle.png);
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -190px;
+    left: 95px;
+    z-index: 1;
+}
+
+.mic {
+    width: 110px;
+    position: absolute;
+}
+
+.banner-text {
+    position: relative;
+    top: 170px;
+}
+
+.banner-text h2 {
+    font-size: 4rem;
+    margin-bottom: 8px;
+}
+
+.banner-text p {
+    margin-bottom: 24px;
+}
+
+.buttons {
+    justify-content: center;
+    gap: 8px;
+}
+
+.transparent {
+    background: transparent;
+    border-radius: 10000px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #00FF88;
+}
+
+.btn-clr-tr {
+    color: #00FF88;
+    padding: 12.5px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+}
+
 /* About Podcast */
 
 .About-Podcast {
@@ -222,6 +312,17 @@ hr {
     margin-bottom: 120px;
 }
 
+.video {
+    position: relative;
+    height: 50%;
+}
+
+.video iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 .card {
     background-color: rgba(53, 17, 101, 0.4);
     border-radius: 30px;
@@ -327,6 +428,58 @@ footer h1 {
         color: white;
     }
 
+    /* Banner */
+
+    @media (max-width: 576px) {
+
+        .banner {
+            height: 60vh;
+            padding: 100px 16px 220px;
+        }
+
+        .badge {
+            top: -20px;
+            left: 270px;
+            padding: 7.5px 9px;
+        }
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .mic {
+            width: 60px;
+        }
+
+        .banner-text {
+            top: 180px;
+            padding: 0 10px;
+        }
+
+        .banner-text h2 {
+            font-size: 2.5rem;
+        }
+
+        .banner-text p {
+            font-size: 1rem;
+        }
+
+        .buttons {
+            gap: 12px;
+        }
+
+        .btn,
+        .transparent {
+            width: 100%;
+            justify-content: center;
+        }
+
+    }
+
     .rating {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -376,6 +529,10 @@ footer h1 {
 
     .logo {
         justify-content: center;
+    }
+
+    .card-container {
+        display: grid;
     }
 
     footer {
